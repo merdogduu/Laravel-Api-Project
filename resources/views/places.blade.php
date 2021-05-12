@@ -29,6 +29,7 @@
           <!--  <span class="input-group-text" id="inputGroup-sizing-default">Search</span>
           <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">  -->
           <form class="input-group" action="#" method="get">
+            @csrf
             <input class="form-control" type="text" name="userquery" id="userquery" value="">
             <input class="input-group-text" type="submit" value="Arama">
           </form>
