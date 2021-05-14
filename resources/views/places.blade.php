@@ -8,17 +8,8 @@
   </head>
   <body>
 
-    <!--HEADER START-->
-    <div class="container">
-      <div class="row">
-        <nav class="navbar navbar-dark bg-primary">
-          <div class="container-fluid">
-            <a class="navbar-brand mb-0 h1"  href="{{route('places')}}">Foursquare Mekan Arama</a>
-          </div>
-        </nav>
-      </div>
-    </div>
-    <!--HEADER END-->
+
+  @include('header');
 
 
     <!--PLACE-SEARCH-->
@@ -43,19 +34,19 @@
 
                 <p class="card-text">
 
-                    <?php  if (empty($item['location']['address'])) {
-                        echo 'Adres Girdisi Yok!';
-                    }
-                    else {
-                      echo $item['location']['address'].",";
-                    }?>
+                  @if(empty($item['location']['address']))
+                      Adres Girdisi Yok!,
 
-                    <?php  if (empty($item['location']['city'])) {
-                        echo '';
-                    }
-                    else {
-                      echo $item['location']['city'].",";
-                    }?>
+                  @else
+                    {{$item['location']['address']}},
+                  @endif
+
+                    @if (empty($item['location']['city']))
+                        İlçe Girdisi Yok!
+                    @else
+                      {{$item['location']['city']}}
+
+                    @endif
                 </p>
 
               </div>
