@@ -16,12 +16,6 @@ class PlaceController extends Controller
 
     $userquery=$request->userquery;
 
-    $url = "https://api.foursquare.com/v2/venues/search?client_id=GK3LUJWIJGJ32MOGVY2CKRS01CT5R2ONQJJAJOPVJ5HERXZ1&client_secret=X4M34R40GMMTKFJ0MXBQ3P4E4Z2KEI3RHMXDBQGAYIGJWSJB&v=20180323&limit=12&ll=40.99908,28.87386&radius=10000&query=cafe";
-
-
-    $json = file_get_contents($url);
-    $elements = json_decode($json,true);
-
     $collection=Http::get('https://api.foursquare.com/v2/venues/search', [
       'client_id' => $key,
       'client_secret' => $server,
