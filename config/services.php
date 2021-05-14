@@ -30,4 +30,8 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'api' => [
+      'id' => env('FOURSQUARE_CLIENT_ID'),
+      'server' => env('FOURSQUARE_CLIENT_SERVER'),
+    ],
 ];

@@ -30,7 +30,7 @@
           <div class="col-md-3">
             <div class="card" style="width: 18rem; height: 12rem;">
               <div class="card-body">
-                <h5 class="card-title">{{$item['name']}}</h5>
+                <h5 class="card-title" style="text-transform:uppercase">{{$item['name']}}</h5>
 
                 <p class="card-text">
 
