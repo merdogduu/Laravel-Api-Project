@@ -25,8 +25,6 @@ class PlaceController extends Controller
       'll' => '40.99908,28.8738',
       'query' => $userquery,
     ])->json(['response','venues']);
-    echo config('ip.id');
-
           //dd($collection);
 
           return view('places', ['collection'=>$collection]);
